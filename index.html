@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="es">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDN87RHB47"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TDN87RHB47');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BTG Pactual · Leasing Empresas (wireframe)</title>
@@ -15,7 +23,7 @@ html{scroll-behavior:smooth}
 <body>
 <div style="font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1C2430; background: #FFFFFF; width: 100%">
 
-<header style="border-bottom: 1px solid #C9CDD3; background: #FFFFFF">
+<header id="header" style="border-bottom: 1px solid #C9CDD3; background: #FFFFFF">
 <div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <div style="display: flex; align-items: center; gap: 12px">
 <div style="width: 48px; height: 48px; border: 2px dashed #8A929C; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5B6470">LOGO</div>
@@ -31,11 +39,11 @@ html{scroll-behavior:smooth}
 <a href="#simula" style="text-decoration: none">Simulador</a>
 <a href="#contacto" style="text-decoration: none">Contacto</a>
 </nav>
-<a href="#contacto" style="background: #1F3A68; color: #FFFFFF; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 15px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Hablar con un ejecutivo</a>
+<a href="#contacto" id="cta-principal" class="cta-principal" style="background: #1F3A68; color: #FFFFFF; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 15px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Hablar con un ejecutivo</a>
 </div>
 </header>
 
-<section style="background: #F2F3F5">
+<section id="hero" style="background: #F2F3F5">
 <div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
 <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
 <span style="align-self: flex-start; border: 1px solid #8A929C; border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: #3A4350">Nuevo en BTG Pactual Chile</span>
@@ -143,7 +151,7 @@ html{scroll-behavior:smooth}
 </div>
 </section>
 
-<section style="background: #1C2430; color: #FFFFFF">
+<section id="cifras" style="background: #1C2430; color: #FFFFFF">
 <div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px; display: flex; flex-direction: column; gap: 28px">
 <h2 style="margin: 0; font-size: 24px; font-weight: 600">Corporate Lending en cifras</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 32px">
@@ -202,7 +210,7 @@ html{scroll-behavior:smooth}
 <span style="font-size: 22px; font-weight: 600; font-family: 'IBM Plex Mono', monospace">[X,X%]</span>
 </div>
 <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #5B6470">Simulación referencial, sujeta a evaluación de riesgo.</p>
-<a href="#contacto" style="align-self: flex-start; border: 2px solid #1C2430; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Solicitar evaluación</a>
+<a href="#contacto" class="cta-principal" style="align-self: flex-start; border: 2px solid #1C2430; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Solicitar evaluación</a>
 </div>
 </div>
 </div>
@@ -244,7 +252,7 @@ html{scroll-behavior:smooth}
 <label for="c-msg" style="font-size: 14px; font-weight: 600">Mensaje</label>
 <textarea id="c-msg" rows="4" style="border: 1px solid #8A929C; border-radius: 6px; padding: 12px; font-size: 15px; font-family: inherit; box-sizing: border-box"></textarea>
 </div>
-<button type="button" style="background: #1F3A68; color: #FFFFFF; border: 0; padding: 0 28px; height: 48px; border-radius: 6px; font-size: 15px; font-weight: 600; font-family: inherit">Enviar solicitud</button>
+<button type="button" class="cta-principal" style="background: #1F3A68; color: #FFFFFF; border: 0; padding: 0 28px; height: 48px; border-radius: 6px; font-size: 15px; font-weight: 600; font-family: inherit">Enviar solicitud</button>
 </form>
 </div>
 </section>
@@ -267,5 +275,16 @@ html{scroll-behavior:smooth}
 
 </div>
 <a class="wf-switch" href="panel.html">Ver panel interno →</a>
+<script>
+  // Envía el evento clic_cta_principal cuando el visitante hace clic en el CTA
+  document.querySelectorAll('#cta-principal, .cta-principal').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      var seccion = boton.closest('section, header');
+      gtag('event', 'clic_cta_principal', {
+        ubicacion: seccion && seccion.id ? seccion.id : 'sin_seccion'
+      });
+    });
+  });
+</script>
 </body>
 </html>
