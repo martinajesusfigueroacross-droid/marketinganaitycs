@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel interno · Objetivo Leasing (wireframe)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1C2430}a:hover{color:#1F3A68}
+html{scroll-behavior:smooth}
+.wf-switch{position:fixed;right:16px;bottom:16px;background:#FFFFFF;border:1px solid #8A929C;border-radius:999px;padding:12px 18px;font:600 14px 'IBM Plex Sans',system-ui,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.12);z-index:10}
+</style>
+</head>
+<body>
+<div style="font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #1C2430; background: #F2F3F5; width: 100%; min-height: 1400px">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #C9CDD3">
+<div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="width: 40px; height: 40px; border: 2px dashed #8A929C; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #5B6470">LOGO</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-weight: 700; font-size: 17px">Panel interno · Leasing Empresas</span>
+<span style="font-size: 13px; color: #5B6470">Corporate Lending · BTG Pactual Chile</span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+<label for="periodo" style="font-size: 14px; font-weight: 600">Período</label>
+<select id="periodo" style="height: 44px; border: 1px solid #8A929C; border-radius: 6px; padding: 0 12px; font-size: 14px; font-family: inherit; background: #FFFFFF"><option>Ene – Dic 2027</option><option>Último trimestre</option><option>Último mes</option></select>
+<span style="font-size: 13px; color: #5B6470; font-family: 'IBM Plex Mono', monospace">Actualizado: [fecha]</span>
+</div>
+</div>
+</header>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px 56px; display: flex; flex-direction: column; gap: 24px">
+
+<section style="background: #FFFFFF; border: 1px solid #C9CDD3; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600; color: #5B6470; text-transform: uppercase; letter-spacing: 0.08em">Objetivo SMART</span>
+<p style="margin: 0; font-size: 17px; line-height: 1.55">Lanzar el leasing financiero para empresas en Corporate Lending y alcanzar una cartera de US$100 millones al 31 de diciembre de 2027, con al menos un 30% de las operaciones originadas por cross-selling y una morosidad bajo el 1,5%.</p>
+</section>
+
+<section aria-label="Indicadores clave" style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 1 1 250px; min-width: 0; background: #FFFFFF; border: 1px solid #C9CDD3; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 14px; color: #3A4350; font-weight: 600">Cartera de leasing</span>
+<span style="font-size: 32px; font-weight: 700; font-family: 'IBM Plex Mono', monospace">[US$ XX MM]</span>
+<span style="font-size: 13px; color: #5B6470">Meta: US$100 MM</span>
+<div style="height: 10px; border-radius: 999px; background: #E4E7EB; border: 1px dashed #8A929C"></div>
+<span style="font-size: 12px; color: #5B6470; font-family: 'IBM Plex Mono', monospace">[barra de avance %]</span>
+</div>
+<div style="flex: 1 1 250px; min-width: 0; background: #FFFFFF; border: 1px solid #C9CDD3; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 14px; color: #3A4350; font-weight: 600">Operaciones por cross-selling</span>
+<span style="font-size: 32px; font-weight: 700; font-family: 'IBM Plex Mono', monospace">[XX%]</span>
+<span style="font-size: 13px; color: #5B6470">Meta: 30% o más</span>
+<div style="height: 10px; border-radius: 999px; background: #E4E7EB; border: 1px dashed #8A929C"></div>
+<span style="font-size: 12px; color: #5B6470; font-family: 'IBM Plex Mono', monospace">[barra de avance %]</span>
+</div>
+<div style="flex: 1 1 250px; min-width: 0; background: #FFFFFF; border: 1px solid #C9CDD3; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 14px; color: #3A4350; font-weight: 600">Morosidad cartera leasing</span>
+<span style="font-size: 32px; font-weight: 700; font-family: 'IBM Plex Mono', monospace">[X,X%]</span>
+<span style="font-size: 13px; color: #5B6470">Límite: bajo 1,5%</span>
+<span style="align-self: flex-start; border: 1px solid #8A929C; border-radius: 999px; padding: 4px 12px; font-size: 12px; font-weight: 600">[En rango / Alerta]</span>
+</div>
+<div style="flex: 1 1 250px; min-width: 0; background: #FFFFFF; border: 1px solid #C9CDD3; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 14px; color: #3A4350; font-weight: 600">Plazo restante</span>
+<span style="font-size: 32px; font-weight: 700; font-family: 'IBM Plex Mono', monospace">[XXX días]</span>
+<span style="font-size: 13px; color: #5B6470">Fecha límite: 31-12-2027</span>
+</div>
+</section>
+
+<section style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 2 1 560px; min-width: 0; background: #FFFFFF; border: 1px solid #C9CDD3; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 18px; font-weight: 600">Cartera acumulada vs. meta (mensual)</h2>
+<div style="height: 300px; border: 2px dashed #8A929C; border-radius: 8px; background: #F7F8F9; display: flex; align-items: center; justify-content: center; color: #5B6470; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-align: center; padding: 0 24px">[Gráfico de líneas: cartera real por mes vs. línea de meta hasta US$100 MM]</div>
+</div>
+<div style="flex: 1 1 320px; min-width: 0; background: #FFFFFF; border: 1px solid #C9CDD3; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 18px; font-weight: 600">Origen de las operaciones</h2>
+<div style="height: 180px; border: 2px dashed #8A929C; border-radius: 8px; background: #F7F8F9; display: flex; align-items: center; justify-content: center; color: #5B6470; font-family: 'IBM Plex Mono', monospace; font-size: 14px; text-align: center; padding: 0 16px">[Gráfico de barras por canal]</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+<li style="display: flex; justify-content: space-between"><span>Investment Banking</span><span style="font-family: 'IBM Plex Mono', monospace">[XX%]</span></li>
+<li style="display: flex; justify-content: space-between"><span>Sales &amp; Trading</span><span style="font-family: 'IBM Plex Mono', monospace">[XX%]</span></li>
+<li style="display: flex; justify-content: space-between"><span>Wealth Management</span><span style="font-family: 'IBM Plex Mono', monospace">[XX%]</span></li>
+<li style="display: flex; justify-content: space-between"><span>Clientes nuevos (directo)</span><span style="font-family: 'IBM Plex Mono', monospace">[XX%]</span></li>
+</ul>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #C9CDD3; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: 18px; font-weight: 600">Operaciones recientes</h2>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 720px; border-collapse: collapse; font-size: 14px">
+<thead>
+<tr style="text-align: left; border-bottom: 2px solid #1C2430">
+<th style="padding: 10px 8px; font-weight: 600">Fecha</th>
+<th style="padding: 10px 8px; font-weight: 600">Cliente</th>
+<th style="padding: 10px 8px; font-weight: 600">Tipo de activo</th>
+<th style="padding: 10px 8px; font-weight: 600">Monto</th>
+<th style="padding: 10px 8px; font-weight: 600">Origen</th>
+<th style="padding: 10px 8px; font-weight: 600">Estado</th>
+</tr>
+</thead>
+<tbody style="font-family: 'IBM Plex Mono', monospace; color: #3A4350">
+<tr style="border-bottom: 1px solid #C9CDD3"><td style="padding: 12px 8px">[dd-mm]</td><td style="padding: 12px 8px">[Empresa]</td><td style="padding: 12px 8px">[Maquinaria]</td><td style="padding: 12px 8px">[US$ X MM]</td><td style="padding: 12px 8px">[IB]</td><td style="padding: 12px 8px">[Aprobada]</td></tr>
+<tr style="border-bottom: 1px solid #C9CDD3"><td style="padding: 12px 8px">[dd-mm]</td><td style="padding: 12px 8px">[Empresa]</td><td style="padding: 12px 8px">[Flota]</td><td style="padding: 12px 8px">[US$ X MM]</td><td style="padding: 12px 8px">[WM]</td><td style="padding: 12px 8px">[En evaluación]</td></tr>
+<tr style="border-bottom: 1px solid #C9CDD3"><td style="padding: 12px 8px">[dd-mm]</td><td style="padding: 12px 8px">[Empresa]</td><td style="padding: 12px 8px">[Inmobiliario]</td><td style="padding: 12px 8px">[US$ X MM]</td><td style="padding: 12px 8px">[Directo]</td><td style="padding: 12px 8px">[Firmada]</td></tr>
+<tr><td style="padding: 12px 8px">[dd-mm]</td><td style="padding: 12px 8px">[Empresa]</td><td style="padding: 12px 8px">[Leaseback]</td><td style="padding: 12px 8px">[US$ X MM]</td><td style="padding: 12px 8px">[S&amp;T]</td><td style="padding: 12px 8px">[Aprobada]</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+</div>
+</div>
+<a class="wf-switch" href="index.html">← Ver landing</a>
+</body>
+</html>
