@@ -33,9 +33,6 @@ El leasing es un producto nuevo y los clientes aún no saben que BTG lo ofrece. 
 | KPI | Tasa de sesiones con el evento clave `clic_cta_principal` (tasa de eventos clave de la sesión en GA4). |
 | Target | 5% de las sesiones con clic en el CTA en una semana. Fundamento: las landing pages B2B suelen convertir entre 2% y 5%; al difundir a contactos cercanos, apuntamos al extremo alto (supuesto). |
 | Segmentos | Canal de adquisición (WhatsApp, Instagram, LinkedIn, vía UTM), dispositivo (móvil vs. escritorio) y fuente de campaña (`taller_ma`). |
-
-**Hipótesis:** LinkedIn traerá menos sesiones que WhatsApp, pero con mayor tasa de clic en el CTA, porque llega a un público profesional más cercano al cliente objetivo.
-
 ## 3. Audiencia
 
 | Campo | Respuesta |
@@ -62,11 +59,11 @@ El leasing es un producto nuevo y los clientes aún no saben que BTG lo ofrece. 
 | Campo | Respuesta |
 |---|---|
 | CTA principal (texto exacto) | Hablar con un ejecutivo |
-| ¿Qué ocurre al hacer clic? | Lleva a la sección interna de contacto (formulario) en la misma página. |
-| URL de destino del CTA | `#contacto` (sección interna de `index.html`) |
+| ¿Qué ocurre al hacer clic? | Lleva a la sección de contacto, cuyo botón "Completar solicitud" abre un Google Forms externo en una pestaña nueva (sin datos personales). |
+| URL de destino del CTA | `#contacto` → https://forms.gle/TBsCsX3iZqwygTur5 |
 | CTA secundario | "Simular mi leasing" (lleva al simulador, `#simula`) |
 | Nombre del evento en GA4 | `clic_cta_principal` |
-| Relación con el KPI | Cada clic en el CTA (header, "Solicitar evaluación" del simulador y "Enviar solicitud" del formulario) envía `clic_cta_principal` con el parámetro `ubicacion`. El evento está marcado como evento clave, y su tasa por sesión es el KPI de la sección 2. |
+| Relación con el KPI | Cada clic en el CTA (header, "Solicitar evaluación" del simulador y "Completar solicitud" de contacto) envía `clic_cta_principal` con el parámetro `ubicacion`. El evento está marcado como evento clave, y su tasa por sesión es el KPI de la sección 2. |
 
 Medición: GA4, ID `G-TDN87RHB47`, etiqueta en el `<head>` de `index.html` y script del evento antes de `</body>`.
 
@@ -80,7 +77,7 @@ Medición: GA4, ID `G-TDN87RHB47`, etiqueta en el `<head>` de `index.html` y scr
 | 4 | Beneficios | Responder "¿por qué BTG?" | Sin inmovilizar capital, flexibilidad, un solo banco, opción de compra | No |
 | 5 | Cifras | Dar credibilidad a un producto nuevo | Cifras reales de Corporate Lending | No |
 | 6 | Simulador | Resolver la objeción del costo | Tipo de activo, valor, plazo, pie, cuota estimada | Sí ("Solicitar evaluación") |
-| 7 | Contacto | Concretar la conversión | Formulario de contacto empresarial | Sí ("Enviar solicitud") |
+| 7 | Contacto | Concretar la conversión | Botón a formulario externo (Google Forms) | Sí ("Completar solicitud") |
 | 8 | Pie de página | Cierre e información legal | Dirección, enlaces, texto legal | No |
 
 El CTA principal aparece al inicio (header) y al final (simulador y contacto). Las secciones 3 a 6 responden las objeciones de la audiencia antes de pedir la acción.
@@ -88,7 +85,12 @@ El CTA principal aparece al inicio (header) y al final (simulador y contacto). L
 ## 7. Restricciones del ejercicio
 
 - El sitio es una sola página (`index.html`) con HTML, CSS y JavaScript en el mismo archivo. `panel.html` es un anexo: el panel interno que mide el objetivo SMART.
+- El sitio no tiene formularios propios que recojan datos personales: la solicitud se hace en un Google Forms externo, que solo pide tipo de activo, monto y plazo.
 - No se envían datos personales (nombre, correo, RUT) a GA4 ni en las URL.
+
+## 8. Hipótesis a validar con datos
+
+Creemos que **gerentes de finanzas y dueños de empresas**, al llegar desde **LinkedIn**, harán clic en **"Hablar con un ejecutivo"** porque **es un canal profesional donde el leasing empresarial es relevante para su trabajo, a diferencia de WhatsApp o Instagram, donde llega un público más general**. Lo sabremos si la **tasa de sesiones con `clic_cta_principal`** desde LinkedIn alcanza el **5%** y supera a la de los otros canales durante la semana de difusión.
 
 ## Difusión con UTM
 
